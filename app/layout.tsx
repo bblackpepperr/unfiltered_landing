@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Space_Grotesk, Cormorant_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: "UNFILTERED 2026 | Natural Wine Festival, Baltics",
   description: "The Baltics' Premier Natural Wine Festival. Raw wine, real food, zero fluff. Riga, 2026.",
   keywords: ["natural wine", "wine festival", "baltics", "riga", "unfiltered", "2026"],
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export const viewport: Viewport = {
@@ -35,6 +36,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ6K4KDN7G" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YQ6K4KDN7G');
+          `}
+        </Script>
+      </head>
       <body className={`${spaceGrotesk.variable} ${cormorantGaramond.variable} font-sans antialiased`}>
         <div className="grain-overlay" aria-hidden="true" />
         {children}
