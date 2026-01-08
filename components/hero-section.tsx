@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex flex-col justify-between px-6 py-8 md:px-12 lg:px-24 overflow-hidden">
+    <section className="relative h-screen flex flex-col justify-between px-6 py-8 pb-safe md:px-12 lg:px-24 overflow-hidden">
       {/* Navigation */}
       <nav className="relative z-10 flex items-center justify-center">
         <span className="text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase">
@@ -14,7 +14,7 @@ export function HeroSection() {
       </nav>
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center">
+      <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center min-h-0">
         <h1 className="text-[clamp(3.5rem,15vw,14rem)] font-bold leading-[0.85] tracking-tighter uppercase text-foreground mb-6">
           UNFILTERED
         </h1>
@@ -30,7 +30,7 @@ export function HeroSection() {
           glouglou@unfiltered.lv
         </a>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6 max-w-full px-4">
+        <div className="mt-4 md:mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6 max-w-full px-4">
           <a
             href="https://t.me/unfilteredfest"
             target="_blank"
@@ -68,7 +68,7 @@ export function HeroSection() {
           </a>
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-3">
+        <div className="mt-6 md:mt-10 flex flex-col items-center gap-3">
           <p className="text-xs md:text-sm tracking-widest text-muted-foreground uppercase">
             Official glassware friend:
           </p>
@@ -89,7 +89,7 @@ export function HeroSection() {
       </div>
 
       {/* Bottom info */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-sm tracking-wider text-muted-foreground uppercase">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-sm tracking-wider text-muted-foreground uppercase pb-4 md:pb-0">
         <span>Raw Wine</span>
         <span>Real Food</span>
         <span>Zero Fluff</span>
