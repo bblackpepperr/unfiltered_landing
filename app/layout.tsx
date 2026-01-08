@@ -37,6 +37,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="f1ef5b0c-c5f2-4575-81cf-a0ad5080ca7c"
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
+        />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ6K4KDN7G" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
