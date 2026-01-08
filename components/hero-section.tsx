@@ -1,6 +1,7 @@
 "use client"
 
 import { TicketButton } from "./ticket-button"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
@@ -64,6 +65,25 @@ export function HeroSection() {
               <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
             </svg>
             <span className="text-xs md:text-sm lg:text-base font-medium whitespace-nowrap">@lowine.shop.n.bar</span>
+          </a>
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-3">
+          <p className="text-xs md:text-sm tracking-widest text-muted-foreground uppercase">
+            Official glassware friend:
+          </p>
+          <a
+            href="https://www.gabriel-glas.at/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative w-40 h-12 md:w-48 md:h-14 lg:w-56 lg:h-16 transition-opacity hover:opacity-70"
+          >
+            <Image
+              src="/images/gabriel-20glass.png"
+              alt="Gabriel-Glas"
+              fill
+              className="object-contain brightness-0 invert"
+            />
           </a>
         </div>
       </div>
