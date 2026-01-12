@@ -8,12 +8,14 @@ import "./globals.css"
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
+  display: "swap",
 })
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-cormorant",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -21,6 +23,10 @@ export const metadata: Metadata = {
   description: "The Baltics' Premier Natural Wine Festival. Raw wine, real food, zero fluff. Riga, 2026.",
   keywords: ["natural wine", "wine festival", "baltics", "riga", "unfiltered", "2026"],
   generator: "v0.app",
+  metadataBase: new URL("https://www.unfiltered.lv"),
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export const viewport: Viewport = {
